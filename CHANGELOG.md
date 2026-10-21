@@ -4,9 +4,12 @@ Notable changes to BoothWall, newest first. The format follows [Keep a Changelog
 
 ## [Unreleased]
 
+## [3.1.0] - 2026-10-21
+
 ### Added
 
 - `pnpm demo --lan` opens with a live session: each startup step with its measured time, then a ready card with the guest QR beside the guest, host and wall links and the local passcode. While it runs, new uploads and approvals appear in the terminal as they happen, and single keys open the wall (`w`), Control (`c`) or the guest page (`s`), copy the passcode (`p`), show TV setup (`t`), reprint the card (`r`) or stop (`q`).
+- `pnpm remote:vega` launches [Vega web remote](https://github.com/boothwall/vega-web-remote) v0.2.2, pinned to its source commit: a full remote in a browser tab for the Virtual Device or a Fire TV in developer mode, with a device picker, media keys, held OK and typing onto the TV. It works with any Vega app. `pnpm try` mentions it once the TV app is open; the README, the development guide and the event guide describe it. The existing `pnpm remote` stays.
 
 ### Changed
 
@@ -129,7 +132,8 @@ Live Wall, the photo wall I built on my own as a booth demo and first showed at 
 - `apps/api`: a Hono API on Cloudflare Workers with D1, R2 and a hibernating Durable Object that pushes new photos to every wall.
 - `packages/shared`: the contracts all three apps share.
 
-[Unreleased]: https://github.com/boothwall/boothwall-oss/compare/v3.0.4...HEAD
+[Unreleased]: https://github.com/boothwall/boothwall-oss/compare/v3.1.0...HEAD
+[3.1.0]: https://github.com/boothwall/boothwall-oss/compare/v3.0.4...v3.1.0
 [3.0.4]: https://github.com/boothwall/boothwall-oss/compare/v3.0.3...v3.0.4
 [3.0.3]: https://github.com/boothwall/boothwall-oss/compare/v3.0.2...v3.0.3
 [3.0.2]: https://github.com/boothwall/boothwall-oss/compare/v3.0.1...v3.0.2
